@@ -7,4 +7,9 @@
     <RootNamespace>SuperMarket_Management</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\lib\" />
+    <Folder Include="wwwroot\bootstrap\" />
+  </ItemGroup>
+
 </Project>
