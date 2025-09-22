@@ -8,8 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\lib\" />
-    <Folder Include="wwwroot\bootstrap\" />
+    <Folder Include="wwwroot\lib\bootstrap\" />
   </ItemGroup>
 
 </Project>
