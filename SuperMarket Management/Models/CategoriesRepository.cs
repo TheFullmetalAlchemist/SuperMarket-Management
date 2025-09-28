@@ -16,8 +16,8 @@ namespace SuperMarket_Management.Models
 
         public static void AddCategory(Category category)
         {
-            
-            var MaxId =  _categories.Max(x=>x.CategoryId);
+
+            var MaxId = _categories.Select(x => x.CategoryId).DefaultIfEmpty(0).Max();
             category.CategoryId = MaxId + 1;
             _categories.Add(category);
         }
