@@ -6,7 +6,9 @@
         <h3>Edit Category: @Model.Name</h3>
     }
 }
-
+@{
+    ViewBag.Action = "edit";
+}
 @if (Model != null)
 {
     <partial name="_Category" model="@Model" />

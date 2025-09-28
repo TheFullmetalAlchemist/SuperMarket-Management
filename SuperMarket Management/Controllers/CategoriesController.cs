@@ -20,6 +20,8 @@ namespace SuperMarket_Management.Controllers
         [HttpPost]
         public IActionResult Edit(Category category)
         {
+            ViewBag.Action = "edit";
+
             if (ModelState.IsValid) 
             {
                 CategoriesRepository.UpdateCategory(category.CategoryId, category);
@@ -36,6 +38,8 @@ namespace SuperMarket_Management.Controllers
         [HttpPost]
         public IActionResult Add(Category category)
         {
+
+            ViewBag.Action = "add";
             if (ModelState.IsValid) 
             {
                 CategoriesRepository.AddCategory(category);
