@@ -10,6 +10,7 @@ namespace SuperMarket_Management.Controllers
             var categories = CategoriesRepository.GetCategories();
             return View(categories);
         }
+
         [HttpGet]
         public IActionResult Edit(int? id)
         {
@@ -27,5 +28,30 @@ namespace SuperMarket_Management.Controllers
             }
             return View(category);
         }
+        public IActionResult Add()
+        {
+            return View(new Category());
+        }
+
+        [HttpPost]
+        public IActionResult Add(Category category)
+        {
+            if (ModelState.IsValid) 
+            {
+                CategoriesRepository.AddCategory(category);
+                return RedirectToAction(nameof(Index));
+            }   
+            return View(category);
+        }
+
+
+        [HttpPost]
+        public IActionResult Delete (int categoryId)
+        {
+            CategoriesRepository.DeleteCategory(categoryId);
+
+            return RedirectToAction(nameof(Index));
+        }
+
     }
 }
