@@ -4,7 +4,7 @@ namespace SuperMarket_Management.Models
 {
     public static class CategoriesRepository
     {
-        private static List<Category> _categories => new List<Category>()
+        private static List<Category> _categories = new List<Category>()
             {
                new Category{ CategoryId=1,Description = "Beverage",Name="Beverage" },
                new Category{ CategoryId=2,Description = "Meat", Name="Meat"},

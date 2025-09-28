@@ -1,4 +1,4 @@
-﻿<!Doctype html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -17,25 +17,24 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="/Home/Index">Home</a>
+                            <a class="nav-link text-dark" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="/Categories/Index">Categories</a>
-                        </li>
+                            <a class="nav-link text-dark" asp-controller="Categories" asp-action="Index">Categories</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <div class ="pb-3">
-            @RenderSection("title")
-        </div>
 
+    <div class="container">
+        <div class="pb-3">
+            @RenderSection("title", required: false)
+        </div>
     </div>
+
     <div class="container">
         @RenderBody()
     </div>
